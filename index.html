@@ -1,3 +1,16 @@
+<!-- HW takeaways!!
+
+* eg. On `xs` and `sm` screens, content should take up the entire screen. On `md` and larger screens, you should have some margins on the left and right side of the screen. Check out various sites on your mobile device versus your computer to see this in action!
+
+* Responsive images
+
+Using Bootstrap, make a sticky footer and use sub-rows and sub-columns on your portfolio site _(Hint: Check out the Bootstrap documentation)_
+
+3. Your Bootstrap solution should minimize use of media queries.
+
+4. Deploy your new Bootstrap-powered portfolio to GitHub Pages.
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +40,12 @@
     margin-top: 10px;
 }
 
+    @media screen and (max-width: 1000px) { 
+    .jumbotron{
+        text-align: center;
+        padding:1rem 0 0 0;
+        }
+    }
 
 </style>
 </head>
@@ -39,23 +58,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                    </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                    </li>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Home</button>
+            <button type="button" class="btn btn-secondary">About</button>
+            <button type="button" class="btn btn-secondary">Portfolio</button>
+            <button type="button" class="btn btn-secondary">Contact Me</button>
+          </div>
                 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        
         </div>
     </nav>
 
@@ -65,7 +76,7 @@
         <!-- first row-->
         <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h1 class="display-4 bgBlack textWhite">Johnn Santos</h1>
+                  <h1 class="display-3 bgBlack textWhite">Johnn Santos</h1>
                   <p class="lead">Web Development | Marketing | Business Solutions</p>
                 </div>
               </div>
@@ -143,16 +154,17 @@
                 </div> 
                 <div class="row">
                 <div class="col-md-12">
-                        <div class="card footerMargin">
-                            this is my footer
+                        <footer>
+                        <div class="card footerMargin bgBlack textWhite fixed-bottom">
+                             Footer
                         </div>
+                         </footer>
                 </div>
+        <section>
 
-
-        
+        </section>
       
-    </div>
-
+    
 </body>
 
 </html>
